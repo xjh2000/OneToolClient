@@ -1,11 +1,14 @@
+/* eslint-env node */
+require("@rushstack/eslint-patch/modern-module-resolution");
+
 module.exports = {
-  extends: [
-    'next/core-web-vitals',
-    'eslint-config-prettier',
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-  ],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
   root: true,
-}
+  extends: [
+    "plugin:vue/vue3-recommended",
+    "eslint:recommended",
+    "@vue/eslint-config-prettier/skip-formatting",
+  ],
+  parserOptions: {
+    ecmaVersion: "latest",
+  },
+};
