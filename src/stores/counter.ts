@@ -6,8 +6,8 @@ export const useCounterStore = defineStore("counter", () => {
   const doubleCount = computed(() => (count.value ? count.value * 2 : 0));
   function increment() {
     if (count.value !== null) {
-      count.value++;
-    }
+      count.value++;   
+      }
   }
   watchEffect(() => {
     if (!localStorage["count"]) {
