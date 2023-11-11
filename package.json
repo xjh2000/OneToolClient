@@ -21,6 +21,7 @@
     "@types/node": "^18.18.9",
     "@vitejs/plugin-vue": "^4.4.0",
     "@vue/tsconfig": "^0.4.0",
+    "axios-mock-adapter": "^1.22.0",
     "npm-run-all2": "^6.1.1",
     "typescript": "~5.2.0",
     "vite": "^4.4.11",
