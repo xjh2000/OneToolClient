@@ -1,29 +1,22 @@
 <script setup lang="ts">
-import { useDark, useToggle } from '@vueuse/core'
-import Footer from '@/components/Footer.vue'
-
-const isDark = useDark()
-const toggleDark = useToggle(isDark)
 
 </script>
 
 <template>
-  <div>
+  <el-container style="height: 100%;">
+    <el-header>
+      <Header />
+    </el-header>
     <el-container>
-      <el-header>
-        <ElButton @click="() => toggleDark()">{{ isDark ? "light" : "dark" }}</ElButton>
-      </el-header>
+      <el-aside style="width: 15%;">Aside</el-aside>
       <el-container>
-        <el-aside width="200px">Aside</el-aside>
-        <el-container>
-          <el-main>
-            <slot />
-          </el-main>
-          <el-footer>
-            <Footer />
-          </el-footer>
-        </el-container>
+        <el-main>
+          <slot />
+        </el-main>
+        <el-footer>
+          <Footer />
+        </el-footer>
       </el-container>
     </el-container>
-  </div>
+  </el-container>
 </template>

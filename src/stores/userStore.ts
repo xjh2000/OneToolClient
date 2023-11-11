@@ -9,6 +9,9 @@ export const useUserStore = defineStore("user", {
         role: "",
         isLoggedIn: false,
     }),
+    getters: {
+       
+    },
     actions: {
         /**
          * This method is used to login a user.
