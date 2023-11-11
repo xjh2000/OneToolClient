@@ -28,5 +28,6 @@ const login = async () => {
 
             <button type="submit">Login</button>
         </form>
+        <button @click="userStore.logout">Logout</button>
     </div>
 </template>
