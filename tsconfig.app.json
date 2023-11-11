@@ -11,9 +11,6 @@
   "compilerOptions": {
     "composite": true,
     "baseUrl": ".",
-    "types": [
-      "pinia-plugin-persist"
-    ],
     "paths": {
       "@/*": [
         "./src/*"
