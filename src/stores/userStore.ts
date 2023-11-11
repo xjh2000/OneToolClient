@@ -6,6 +6,7 @@ export const useUserStore = defineStore("user", {
     state: () => ({
         username: "",
         password: "",
+        role: "",
         isLoggedIn: false,
     }),
     actions: {
@@ -27,6 +28,7 @@ export const useUserStore = defineStore("user", {
                 this.username = username;
                 this.password = password;
                 this.isLoggedIn = true;
+                this.role = respond.data.role;
             } else {
                 this.isLoggedIn = false;
             }
