@@ -2,14 +2,14 @@
 import { useUserStore } from '@/stores/userStore';
 import { ref } from 'vue';
 
-const userStore = useUserStore(); 
+const userStore = useUserStore();
 
 const username = ref('');
 const password = ref('');
 
 const login = async () => {
     try {
-       await userStore.login(username.value, password.value)
+        await userStore.login(username.value, password.value)
     } catch (error) {
         console.error('An error occurred:', error);
     }
