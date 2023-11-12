@@ -4,13 +4,15 @@
 
 <template>
   <el-container style="
-        height: 100%;
-        ">
+          height: 100%;
+          ">
     <el-header>
       <Header />
     </el-header>
     <el-container>
-      <el-aside style="width: 15%;">Aside</el-aside>
+      <el-aside style="width: 15%;">
+        <Aside />
+      </el-aside>
       <el-container>
         <el-main>
           <slot />
