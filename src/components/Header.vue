@@ -21,26 +21,26 @@ const handleCommand = (command: string | number | object) => {
             <el-text size="large">OneTool</el-text>
         </el-col>
         <el-col :span="6" :offset="12">
-            <ElSpace>
-                <ElButton @click="() => toggleDark()">{{ isDark ? "light" : "dark" }}</ElButton>
-                <el-dropdown @command="handleCommand">
-                    <ElSpace>
-                        <el-avatar alt="user" size="default" shape="circle"></el-avatar>
-                        <ElText size="large"> {{ userStore.username }}</ElText>
-                        <ElIcon>
-                            <ArrowDown />
-                        </ElIcon>
-                    </ElSpace>
-                    <template #dropdown>
-                        <el-dropdown-menu>
-                            <el-dropdown-item :icon="Avatar" command="profile">Profile</el-dropdown-item>
-                            <el-dropdown-item :icon="ArrowRight" command="logout" divided>Log Out</el-dropdown-item>
-                        </el-dropdown-menu>
-                    </template>
-                </el-dropdown>
-            </ElSpace>
-
+            <el-row justify="end">
+                <ElSpace>
+                    <!-- <ElButton v-show="false" @click="() => toggleDark()">{{ isDark ? "light" : "dark" }}</ElButton> -->
+                    <el-dropdown @command="handleCommand">
+                        <ElSpace>
+                            <el-avatar alt="user" size="default" shape="circle"></el-avatar>
+                            <ElText size="large"> {{ userStore.username }}</ElText>
+                            <ElIcon>
+                                <ArrowDown />
+                            </ElIcon>
+                        </ElSpace>
+                        <template #dropdown>
+                            <el-dropdown-menu>
+                                <el-dropdown-item :icon="Avatar" command="profile">Profile</el-dropdown-item>
+                                <el-dropdown-item :icon="ArrowRight" command="logout" divided>Log Out</el-dropdown-item>
+                            </el-dropdown-menu>
+                        </template>
+                    </el-dropdown>
+                </ElSpace>
+            </el-row>
         </el-col>
-
     </el-row>
 </template>

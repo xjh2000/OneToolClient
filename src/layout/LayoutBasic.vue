@@ -3,7 +3,9 @@
 </script>
 
 <template>
-  <el-container style="height: 100%;">
+  <el-container style="
+        height: 100%;
+        ">
     <el-header>
       <Header />
     </el-header>
