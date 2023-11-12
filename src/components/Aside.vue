@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Expand, Help, House, SwitchButton, Fold } from '@element-plus/icons-vue'
+import { Expand, Help, House, SwitchButton, Fold, VideoCamera } from '@element-plus/icons-vue'
 // use this variables to toggle the collapse state
 const isCollapse = ref(false)
 const toggleCollapse = () => {
@@ -17,6 +17,12 @@ const toggleCollapse = () => {
                 </ElIcon>
                 <template #title>Home</template>
 
+            </ElMenuItem>
+            <ElMenuItem index="/video">
+                <ElIcon>
+                    <VideoCamera />
+                </ElIcon>
+                <template #title>Video</template>
             </ElMenuItem>
             <ElMenuItem index="/about">
                 <ElIcon>
