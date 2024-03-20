@@ -1,5 +1,0 @@
-# OneTool
-
-## technical stack
-
-- Python
